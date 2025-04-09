@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    
+
+    <script src="jquery.js"></script>
+    <script>
+       $(document).ready(function() {
+            $("#f1").hide();
+            $("#f1").fadeIn(5000)
+            $(".f1").hide();
+            $(".f1").fadeIn(7000)
+        });
+    </script>
+
+<script>
+    function validate()
+    {
+        var x=document.form1.uname.value;
+        var y=document.form1.pass.value;
+        if(x==null||x=="")
+    {
+        alert("Please enter your name");
+        document.form1.uname.focus();
+        return false;
+    }
+    if(y==null||y=="")
+    {
+        alert("Please enter your password");
+        document.form1.pass.focus();
+        return false;
+    }
+    }
+</script>
+
+    <style>
+        label
+        {
+            color: white;
+            padding-right: 2px;
+        }
+
+        input
+        {
+            border-radius: 10px;
+            padding-bottom: 2px;
+        }
+
+        ::placeholder
+        {
+            text-align: center;
+        }
+        td
+        {
+            padding-right: 5px;
+            text-align: center;
+        }
+
+        table
+        {
+            border-collapse: collapse;
+        }
+
+    </style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body style="background-color:bisque;">
+    <div class="f1">
+    <table cellspacing="15" cellpadding="5" border="3" style="background-color: black;" >
+        <h1 id="f1" style="text-align: center;">Form</h1>
+        <form action="basic.html" name="form1" method="post" onsubmit="return validate()">
+        <tr>
+            <td><label for="name">Name</td>
+            <td><input type="text" placeholder="Enter your Name" name="uname" required></td>
+        </tr>
+        <tr>
+            <td><label for="email">E-Mail</td>
+            <td><input type="email" placeholder="Enter your E-mail" name="mail" required></td>
+        </tr>
+        <tr>
+            <td><label for="pass">Password</td>
+            <td><input type="password" placeholder="Enter Password" name="pass" required></td>
+        </tr>
+        <tr>   
+            <td><input type="submit" value="Submit" style="background-color: green; color: white;"></td>
+            <td><input type="reset" value="Reset" style="background-color: red; color: white;"></td>
+        </tr>
+       </form> 
+    </table>
+    </div>
+</body>
+</html>
